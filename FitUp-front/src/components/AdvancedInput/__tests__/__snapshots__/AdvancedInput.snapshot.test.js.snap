@@ -1,0 +1,4 @@
+exports[`test AdvancedInput renders correctly excluding 3rd party react-select 1`] = `
+<div
+  className="advancedInputWrapper" />
+`;

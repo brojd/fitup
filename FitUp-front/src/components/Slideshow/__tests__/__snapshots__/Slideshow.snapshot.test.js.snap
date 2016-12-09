@@ -1,0 +1,68 @@
+exports[`test Slideshow renders correctly 1`] = `
+<div
+  className="Slideshow uk-width-10-10">
+  <div
+    className="slideSection uk-width-4-10 uk-align-center">
+    <div
+      className="slide uk-align-center">
+      <img
+        alt="image 0"
+        className="uk-align-center slide__img fadeIn"
+        height={150}
+        onClick={undefined}
+        src="http://www.noupe.com/wp-content/uploads/2012/10/pixabay-beach-49877.jpg"
+        width={600} />
+      <h2
+        className="uk-align-center slide__text zoomInUp"
+        style={undefined}>
+        All fitness classes on one website
+      </h2>
+    </div>
+    <div
+      className="slide uk-align-center">
+      <img
+        alt="image 1"
+        className="uk-align-center slide__img hide"
+        height={150}
+        onClick={undefined}
+        src="http://www.noupe.com/wp-content/uploads/2012/10/pixabay-beach-49879.jpg"
+        width={600} />
+      <h2
+        className="uk-align-center slide__text hide"
+        style={undefined}>
+        Filter the schedule easily
+      </h2>
+    </div>
+    <div
+      className="slide uk-align-center">
+      <img
+        alt="image 2"
+        className="uk-align-center slide__img hide"
+        height={150}
+        onClick={undefined}
+        src="http://sm4u.pl/wp-content/uploads/2014/04/Pixabay-Free-photos.png"
+        width={600} />
+      <h2
+        className="uk-align-center slide__text hide"
+        style={undefined}>
+        Review all trainers from Wroclaw
+      </h2>
+    </div>
+    <div
+      className="slide uk-align-center">
+      <img
+        alt="image 3"
+        className="uk-align-center slide__img hide"
+        height={150}
+        onClick={undefined}
+        src="https://cdn.pixabay.com/blog/post/2013/03/23/23-02-28-603_640.jpg"
+        width={600} />
+      <h2
+        className="uk-align-center slide__text hide"
+        style={undefined}>
+        Save your time
+      </h2>
+    </div>
+  </div>
+</div>
+`;

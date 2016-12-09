@@ -1,0 +1,74 @@
+@import "../../../../base_scss/all_base_files";
+
+.fu-about-gym {
+  padding: 50px 0 0 150px;
+  color: $gray;
+  .fu-tab * {
+    color: $quill_gray;
+  }
+  .fu-tab__listElem:hover .fu-tab__anchor, .fu-tab__listElem.uk-active .fu-tab__anchor {
+    color: $gray;
+    border-bottom: 1px solid $shamrock;
+  }
+  .fu-aboutGym__saveButton {
+    color: $clear_day;
+    background: $de_york;
+  }
+  .fu-aboutGym__saveButton:hover {
+    background: $bay_leaf;
+    animation: giveBottomShadow 0.2s forwards, moveUp 0.2s forwards;
+  }
+  .fu-aboutGym__saveButton:not(:hover) {
+    animation: removeBoxShadow 0.2s forwards, moveDown 0.2s forwards;
+  }
+  .fu-about-gym__heading {
+    color: $gray;
+    border-bottom: 1px solid rgba($spectra, 0.17);
+    text-transform: uppercase;
+  }
+}
+
+.fu-fieldset {
+  background: $concrete;
+  border: 1px solid #bec3ce;
+  box-shadow: 2px 2px 10px #909090;
+  color: $gray;
+  .fu-fieldset__inputText {
+    padding: 4px 6px;
+    border: 1px solid #E5E5E5;
+    color: $gray;
+  }
+  .fu-fieldset__legend {
+    color: $gray;
+    border: 1px solid $alto;
+    border-bottom-color: $shamrock;
+    background: $white;
+    padding: 8px 12px 8px 12px;
+  }
+  .fu-fieldset__thumbnail {
+    padding: 4px;
+    border: 1px solid #E5E5E5;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.05);
+  }
+  .fu-aboutGym__deleteButton {
+    background: rgba($red_orange, 0.66);
+    color: $clear_day;
+  }
+  .fu-aboutGym__deleteButton:hover {
+    background: $torch_red;
+    animation: giveBottomShadow 0.2s forwards, moveUp 0.2s forwards;
+  }
+  .fu-aboutGym__addButton {
+    background: $pelorous;
+    color: $clear_day;
+  }
+  .fu-aboutGym__addButton:hover {
+    background: $teal;
+    animation: giveBottomShadow 0.2s forwards, moveUp 0.2s forwards;
+  }
+  .fu-aboutGym__addButton:not(:hover), .fu-aboutGym__deleteButton:not(:hover) {
+    animation: removeBoxShadow 0.2s forwards, moveDown 0.2s forwards;
+  }
+}

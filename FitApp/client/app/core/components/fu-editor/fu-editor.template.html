@@ -1,0 +1,22 @@
+<div class="uk-display-block">
+	<fu-trainers class="uk-display-inline-block uk-width-6-10"
+	             *ngIf="listID===1"
+	             (onChosen)="setFormID($event.formID); setCurrentTrainer($event.trainer)"
+	             [newTrainer]="trainerToAdd">
+	</fu-trainers>
+	<fu-classes class="uk-display-inline-block uk-width-6-10"
+	            *ngIf="listID===2" (onChosen)="setFormID($event.formID); setCurrentClasses($event.classes)"
+	            (onDeletedClass)="passToDelete()"
+	            [newClasses]="classesToAdd">
+	</fu-classes>
+	<div class="uk-display-inline-block uk-width-4-10 uk-float-right uk-margin-large-top">
+		<fu-edit-form class="uk-width-6-10 uk-align-center fu-edit-form"
+		              [formID]="currentForm"
+		              [currentTrainer]="trainer"
+		              [currentClasses]="classes"
+		              (onAddTrainer)="passAddedTrainer($event)"
+		              (onAddClasses)="passAddedClasses($event)"
+		              [classesToDelete]="classesToDelete">
+		</fu-edit-form>
+	</div>
+</div>

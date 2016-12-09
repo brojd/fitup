@@ -1,0 +1,53 @@
+exports[`test CalculatorBMI renders correctly 1`] = `
+<div>
+  <div
+    className="calcWrapper uk-float-right uk-width-8-10 slideInRightSkew">
+    <img
+      alt={undefined}
+      className="backImg"
+      height={150}
+      onClick={undefined}
+      src="test-file-stub"
+      width={1050} />
+    <section
+      className="calculator uk-width-6-10">
+      <div
+        className="mainHeadingWrapper">
+        <h2
+          className="mainHeading uk-text-center">
+          BMI CALCULATOR
+        </h2>
+      </div>
+      <form>
+        <div>
+          <h3
+            className="inputHeading uk-text-center">
+            Enter your weight (kg)
+          </h3>
+          <input
+            className="input uk-width-4-10 uk-align-center"
+            onChange={[Function]}
+            placeholder="your weight..."
+            type="number" />
+        </div>
+        <div>
+          <h3
+            className="inputHeading uk-text-center">
+            Enter your height (cm)
+          </h3>
+          <input
+            className="input uk-width-4-10 uk-align-center"
+            onChange={[Function]}
+            placeholder="your height..."
+            type="number" />
+        </div>
+        <button
+          className="calcButton uk-align-center"
+          onClick={[Function]}>
+          Calculate
+        </button>
+      </form>
+    </section>
+  </div>
+</div>
+`;

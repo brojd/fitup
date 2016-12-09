@@ -1,0 +1,22 @@
+exports[`test CitySelect renders correctly with given props 1`] = `
+<select
+  className="uk-float-right citySelect"
+  defaultValue="Gdańsk"
+  onChange={[Function]}>
+  <option
+    className="cityOption"
+    value="Wrocław">
+    Wrocław
+  </option>
+  <option
+    className="cityOption"
+    value="Opole">
+    Opole
+  </option>
+  <option
+    className="cityOption"
+    value="Gdańsk">
+    Gdańsk
+  </option>
+</select>
+`;

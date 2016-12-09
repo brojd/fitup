@@ -1,0 +1,77 @@
+exports[`test EventBoxList renders correctly 1`] = `
+<ul
+  className="uk-list uk-list-space uk-list-line">
+  <li>
+    TRAINER
+    <span
+      className="uk-float-right">
+      <img
+        alt="trainer_photo"
+        className="classesInfoWrapper__trainerPhoto"
+        height={150}
+        onClick={undefined}
+        src="http://trenujzmichalem.pl/wp-content/uploads/2014/01/ostr-slider-535x572.png"
+        width={50} />
+      Andrew
+       
+      Kowalski
+    </span>
+  </li>
+  <li>
+    GYM 
+    <span
+      className="uk-float-right">
+      Fitness Academy
+    </span>
+  </li>
+  <li>
+    ADDRESS
+    <span
+      className="uk-float-right">
+      Długa 3, Wrocław
+    </span>
+  </li>
+  <li>
+    CARDS ACCEPTED 
+    <span
+      className="uk-float-right">
+      <span
+        className="uk-margin-small-right uk-badge">
+        Multisport
+      </span>
+      <span
+        className="uk-margin-small-right uk-badge">
+        ActiveSport
+      </span>
+      <span
+        className="uk-margin-small-right uk-badge">
+        OKsystem
+      </span>
+    </span>
+  </li>
+  <li>
+    PRICES 
+    <span
+      className="uk-float-right">
+      <div>
+        1 workout
+        : 
+        15
+         PLN
+      </div>
+      <div>
+        1 hour
+        : 
+        40
+         PLN
+      </div>
+      <div>
+        1 month
+        : 
+        130
+         PLN
+      </div>
+    </span>
+  </li>
+</ul>
+`;

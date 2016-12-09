@@ -1,0 +1,45 @@
+@import "../../../../base_scss/all_base_files";
+
+.fu-header {
+  box-shadow: 0px 3px 4px 1px $white;
+  display: block;
+  background: $white;
+  .fu-header__logo {
+    width: 95px;
+    height: auto;
+  }
+  .fu-headerGym {
+    top: 35px;
+    right: 25px;
+    padding-bottom: 55px;
+    color: $gray;
+    font-weight: 600;
+    animation: all .15s ease-in-out;
+  }
+  .fu-dropdown {
+    right: 25px;
+    top: 80px;
+    padding: 10px;
+    position: absolute;
+    background: $concrete;
+    vertical-align: top;
+    border: 1px solid $alto;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+  }
+  .fu-dropdown:hover {
+    display: block;
+    background: $scooter;
+    color: $white;
+    background: linear-gradient(rgb(42, 197, 205), rgba(56, 165, 163, 0.61));
+    text-decoration: none;
+    border: 1px solid $alto;
+  }
+  .fu-headerGym:hover ~ .fu-dropdown {
+    display: block;
+  }
+  .fu-headerGym__logo {
+    width: 50px;
+    height: auto;
+  }
+}

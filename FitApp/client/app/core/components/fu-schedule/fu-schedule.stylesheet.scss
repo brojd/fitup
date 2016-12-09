@@ -1,0 +1,10 @@
+@import "../../../../base_scss/all_base_files";
+
+.fu-scheduleWrapper {
+  margin: 50px 0 0 200px;
+  .fu-schedule {
+    min-height: 75vh;
+    color: $gray;
+  }
+}
+

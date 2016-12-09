@@ -1,0 +1,52 @@
+@import "../../../../base_scss/all_base_files";
+
+.fu-trainers {
+  padding: 50px 0 0 150px;
+  color: $gray;
+  .fu-tab * {
+    color: $quill_gray;
+  }
+  .fu-tab__listElem:hover .fu-tab__anchor, .fu-tab__listElem.uk-active .fu-tab__anchor {
+    color: $gray;
+    border-bottom: 1px solid $shamrock;
+  }
+  .fu-listOfTrainers__miniPhoto {
+    width: 30px;
+    height: auto;
+  }
+  .fu-listOfTrainers__tableHead {
+    border-bottom: 1px solid $quill_gray;
+  }
+  .fu-listOfTrainers__aboutMe {
+    width: 200px;
+  }
+  .fu-listOfTrainers__td {
+    vertical-align: baseline;
+  }
+  .fu-listOfTrainers__tr {
+    border-bottom: 1px solid $quill_gray;
+  }
+  .fu-listOfTrainers__tbody {
+    color: $silver_chalice;
+  }
+  .fu-listOfTrainers__editButton {
+    background: $ghost;
+    color: $clear_day;
+  }
+  .fu-listOfTrainers__deleteButton {
+    background: rgba($red_orange, 0.66);
+    color: $clear_day;
+  }
+  .fu-listOfTrainers__editButton:hover {
+    background: $gray;
+    animation: giveBottomShadow 0.2s forwards, moveUp 0.2s forwards;
+  }
+  .fu-listOfTrainers__editButton:not(:hover), .fu-listOfTrainers__deleteButton:not(:hover) {
+    animation: removeBoxShadow 0.2s forwards, moveDown 0.2s forwards;
+  }
+  .fu-listOfTrainers__deleteButton:hover {
+    background: $torch_red;
+    animation: giveBottomShadow 0.2s forwards, moveUp 0.2s forwards;
+  }
+}
+

@@ -1,0 +1,174 @@
+<div class="fu-about-gym uk-border-rounded uk-display-block">
+	<form class="uk-form-horizontal uk-animation-slide-right uk-width-10-10" #form="ngForm">
+		<fieldset class="fu-fieldset uk-border-rounded uk-width-3-10 uk-margin-top-remove
+						 uk-display-inline-block uk-float-left uk-margin-large-right">
+			<legend class="fu-fieldset__legend uk-border-rounded">BASIC INFORMATION</legend>
+			<div class="uk-form-row uk-align-center uk-width-9-10 uk-margin-top">
+				<label class="uk-align-left uk-width-3-10" for="name">Name of gym:</label>
+				<input class="uk-width-6-10 fu-fieldset__inputText" type="text" id="name" name="name"
+				       [(ngModel)]="currentGym.name" #name="ngModel" minlength=2 maxlength=20 required>
+				<div class="uk-alert uk-alert-danger uk-width-10-10" [hidden]="name.valid">
+					<span class="uk-width-8-10 uk-align-center">
+						Name of gym should be composed of 2 - 20 letters
+					</span>
+				</div>
+			</div>
+			<div class="uk-form-row uk-align-center uk-width-9-10 uk-margin-top">
+				<h5 class="fu-about-gym__heading">Address</h5>
+				<div ngModelGroup="address">
+					<div class="uk-form-row uk-margin uk-align-center">
+						<label class="uk-align-left uk-width-3-10" for="city">City:</label>
+						<input class="uk-width-6-10 fu-fieldset__inputText" type="text" id="city" name="city"
+						       [(ngModel)]="currentGym.address.city" #city="ngModel" minlength=2 maxlength=30 required>
+						<div class="uk-alert uk-alert-danger uk-width-10-10" [hidden]="city.valid">
+							<span class="uk-width-8-10 uk-align-center">
+								City should be composed of 2 - 30 letters
+							</span>
+						</div>
+					</div>
+					<div class="uk-form-row uk-margin uk-align-center">
+						<label class="uk-align-left uk-width-3-10" for="postal_code">Postal code:</label>
+						<input class="uk-width-6-10 fu-fieldset__inputText" type="text" id="postal_code"
+						       name="postal_code" [(ngModel)]="currentGym.address.postal_code" #postal_code="ngModel"
+						       minlength=6 maxlength=6 required>
+						<div class="uk-alert uk-alert-danger uk-width-10-10" [hidden]="postal_code.valid">
+							<span class="uk-width-8-10 uk-align-center">
+								Postal code should follow "xx-xxx" pattern
+							</span>
+						</div>
+					</div>
+					<div class="uk-form-row uk-margin uk-align-center">
+						<label class="uk-align-left uk-width-3-10" for="street">Street:</label>
+						<input class="uk-width-6-10 fu-fieldset__inputText" type="text" id="street" name="street"
+						       [(ngModel)]="currentGym.address.street" #street="ngModel" minlength=3
+						       maxlength=30 required>
+						<div class="uk-alert uk-alert-danger uk-width-10-10" [hidden]="street.valid">
+							<span class="uk-width-8-10 uk-align-center">
+								Street should be composed of 2 - 30 letters
+							</span>
+						</div>
+					</div>
+					<div class="uk-form-row uk-margin uk-align-center">
+						<label class="uk-align-left uk-width-3-10" for="street">Number:</label>
+						<input class="uk-width-6-10 fu-fieldset__inputText" type="text" id="number" name="number"
+						       [(ngModel)]="currentGym.address.number" #number="ngModel" pattern="^[0-9a-zA-Z/]+$">
+						<div class="uk-alert uk-alert-danger" [hidden]="number.valid">
+							<span class="uk-width-8-10 uk-align-center">
+								You should use only numbers, letters or "/"
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset class="fu-fieldset uk-border-rounded uk-width-3-10 uk-display-inline-block uk-margin-top-remove
+						 uk-float-left uk-margin-large-right">
+			<legend class="fu-fieldset__legend uk-border-rounded">GALLERY</legend>
+			<div class="uk-form-row uk-margin uk-margin-large-bottom uk-align-center uk-width-9-10">
+				<h5 class="fu-about-gym__heading">Logo</h5>
+				<div class="uk-form-row uk-align-center uk-width-10-10">
+					<label class="uk-align-left uk-width-2-10" for="logo_url">URL:</label>
+					<input class="uk-width-7-10 uk-align-right fu-fieldset__inputText" type="text" id="logo_url"
+					       name="logo_url" [(ngModel)]="currentGym.logo_url" #logo_url="ngModel">
+					<img *ngIf="isValidURL(logo_url.value) && currentGym.logo_url" [src]="logo_url.value" [alt]="currentGym.name"
+					     class="uk-thumbnail-mini uk-align-center fu-fieldset__thumbnail uk-form-row">
+					<div class="uk-alert uk-alert-danger uk-width-10-10" [hidden]="isValidURL(logo_url.value)">
+						<span class="uk-width-3-10 uk-align-center">
+							URL is not valid
+						</span>
+					</div>
+				</div>
+				<h5 class="fu-about-gym__heading">Photos</h5>
+				<div *ngFor="let photo_url of currentGym.photo_urls; let i = index; trackBy: trackBy"
+				     ngModelGroup="photo_urls">
+					<div *ngIf="currentGym.photo_urls[i]" class="uk-form-row uk-align-center">
+						<label class="uk-width-2-10" for="photo_url">URL:</label>
+						<input class="uk-width-7-10 fu-fieldset__inputText" type="text" id="photo_url"
+						       name="{{'photo_url_'+i}}" [(ngModel)]="currentGym.photo_urls[i]" #photo_url="ngModel">
+						<button type="button" (click)="deletePhotoURL(i)"
+								class="uk-button-mini uk-button uk-border-rounded uk-align-right
+								fu-aboutGym__deleteButton">
+							Delete
+						</button>
+						<div class="uk-alert uk-alert-danger uk-width-10-10" [hidden]="isValidURL(photo_url.value)">
+							<span class="uk-width-4-10 uk-align-center">
+								URL is not valid
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="uk-form-row">
+					<button class="uk-button-mini uk-align-center uk-button uk-border-rounded fu-aboutGym__addButton"
+					        (click)="addPhotoURL()" type="button">
+						Add new
+					</button>
+				</div>
+				<div class="uk-form-row uk-width-8-10 uk-align-center">
+						<span *ngFor="let photo of currentGym.photo_urls">
+							<img *ngIf="isValidURL(photo)" [src]="photo" [alt]="currentGym.name"
+							     class="uk-thumbnail-mini uk-margin-left uk-margin-top uk-float-left
+							     fu-fieldset__thumbnail">
+						</span>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset class="fu-fieldset uk-border-rounded uk-width-3-10 uk-display-inline-block uk-margin-top-remove
+						 uk-float-left">
+			<legend class="fu-fieldset__legend uk-border-rounded">PRICING</legend>
+			<div class="uk-form-row uk-align-center uk-width-9-10">
+				<h5 class="fu-about-gym__heading">Prices</h5>
+				<div *ngFor="let price of currentGym.pricing; let i = index" ngModelGroup="pricing">
+					<div *ngIf="currentGym.pricing[i]" class="uk-form-row">
+						<input class="uk-width-4-10 fu-fieldset__inputText" type="text" id="price_name"
+						       name="{{'price_name_'+i}}" [(ngModel)]="currentGym.pricing[i].name" #price_name="ngModel"
+						       minlength=2 maxlength=30 required>
+						<span class="uk-width-1-10">costs</span>
+						<span>
+							<input class="uk-width-2-10 fu-fieldset__inputText" type="number" id="price"
+							       name="{{'price_nb_'+i}}" [(ngModel)]="currentGym.pricing[i].price"
+							       #price_nb="ngModel" pattern="^(?:[1-9]|\d{2,3}|[1-4]\d{3}|5000)$" required> PLN
+							<div class="uk-alert uk-alert-danger" [hidden]="isValidPrice(price_nb.value, 1, 5000)">
+								Price should be a number within 1 - 4999 PLN
+							</div>
+						</span>
+						<div class="uk-alert uk-alert-danger" [hidden]="price_name.valid">
+							Name of price should be composed of 2 - 30 letters
+						</div>
+						<button type="button" (click)="deletePrice(i)"
+						        class="uk-button-mini uk-button uk-border-rounded uk-align-right
+						        fu-aboutGym__deleteButton">
+							Delete
+						</button>
+					</div>
+				</div>
+				<button (click)="addPrice()" type="button"
+				        class="uk-button-mini uk-align-center uk-margin-top uk-button uk-border-rounded
+				        fu-aboutGym__addButton">
+					Add new
+				</button>
+			</div>
+			<div class="uk-form-row uk-margin uk-align-center uk-width-9-10">
+				<h5 class="fu-about-gym__heading">Cards accepted</h5>
+				<div *ngFor="let card of currentGym.cards_accepted; let i = index" class="uk-form-row"
+				     ngModelGroup="cards_accepted">
+					<input class="uk-width-1-6 uk-vertical-align-middle" type="checkbox"
+					       [(ngModel)]="currentGym.cards_accepted[i].accepted" name="{{'card_accepted_'+i}}">
+					{{card.name}}
+				</div>
+			</div>
+		</fieldset>
+		<div class="uk-clearfix"></div>
+		<button text="Save" [disabled]="!form.valid" type="button" (click)="editGym(currentGym)"
+				class="uk-align-center uk-margin-top uk-button uk-border-rounded fu-aboutGym__saveButton">
+			Save
+		</button>
+		<div class="uk-width-2-10 uk-align-center uk-alert uk-alert-danger"
+		     *ngIf="!(saveSuccess === 2 || saveSuccess === 1)"> {{saveSuccess}}
+			<span class="uk-align-center uk-width-4-10">Save failed</span>
+		</div>
+		<div class="uk-width-2-10 uk-align-center uk-alert uk-alert-success"
+		     *ngIf="!(saveSuccess === 2 || saveSuccess === 0)">
+			<span class="uk-align-center uk-width-4-10">Successfully saved</span>
+		</div>
+	</form>
+</div>

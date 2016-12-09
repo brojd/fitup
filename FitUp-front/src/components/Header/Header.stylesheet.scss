@@ -1,0 +1,24 @@
+@import "../../../sass_variables/colors";
+
+.Header {
+  border-top: 2px solid $torch_red;
+}
+
+.headerLogo {
+  position: absolute;
+  z-index: 3;
+  left: 50px;
+  top: 15px;
+  background: $black;
+}
+
+.NavBar {
+  position: relative;
+}
+
+.fixedHeader {
+  position: fixed;
+  z-index: 6;
+  box-shadow: 0 2px 5px 0 $temptress;
+  width: 100vw;
+}

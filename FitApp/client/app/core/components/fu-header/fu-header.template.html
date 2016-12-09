@@ -1,0 +1,17 @@
+<header class="fu-header uk-display-block uk-width-10-10">
+	<div class="uk-align-center uk-width-1-10">
+		<a [routerLink]="['/']">
+			<img class="uk-margin-top fu-header__logo" (mouseover)="logoHover=true" (mouseleave)="logoHover=false"
+			     [ngClass]="{'uk-animation-shake':logoHover}" [src]="logoUrl">
+		</a>
+	</div>
+	<a class="uk-position-top-right fu-headerGym" *ngIf="getCurrentGym() && isLoggedIn()" [routerLink]="['/editGym']">
+		<span>{{getCurrentGym().name}}</span>
+		<img class="fu-headerGym__logo uk-width-1-10 uk-margin-left"
+		     [src]="getCurrentGym().logo_url">
+	</a>
+	<a (click)="logOut()" class="uk-dropdown uk-position-right fu-dropdown uk-width-1-10 uk-animation-slide-bottom">
+		Log out
+		<span class="uk-icon-sign-out uk-align-right uk-icon-small uk-margin-remove"></span>
+	</a>
+</header>

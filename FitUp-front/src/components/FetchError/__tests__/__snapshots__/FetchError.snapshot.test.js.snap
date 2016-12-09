@@ -1,0 +1,6 @@
+exports[`test FetchError renders correctly 1`] = `
+<div
+  className="uk-alert uk-alert-danger uk-width-5-10 uk-align-center uk-text-center uk-margin-large-top">
+  Sorry, cannot load data from server...
+</div>
+`;

@@ -1,0 +1,59 @@
+@import "../../../sass_variables/colors";
+
+.eventDetails {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif !important;
+  position: fixed;
+  background: rgba(82, 82, 82, 0.86);
+  border-radius: 1%;
+  border: 1px solid $white;
+  color: $white;
+  z-index: 8;
+}
+
+.classesImgWrapper {
+  position: relative;
+}
+
+.classesImgWrapper__classesImg {
+  margin-top: 15px;
+  border-radius: 1%;
+  border: 1px solid rgba($white, 0.89);
+}
+
+.classesImgWrapper__durationBack {
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+  background: rgba($guardsman_red, 0.92);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.classesImgWrapper__durationText {
+  position: absolute;
+  bottom: 21px;
+  left: 5px;
+}
+
+.classesImgWrapper__time {
+  position: absolute;
+  right: 30px;
+  height: 20px;
+  padding: 10px;
+  bottom: 15px;
+  background: rgba($guardsman_red, 0.92);
+}
+
+.classesInfoWrapper {
+  color: $white;
+}
+
+.classesInfoWrapper__header {
+  background: rgba($guardsman_red, 0.96);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 600;
+  color: $white;
+}

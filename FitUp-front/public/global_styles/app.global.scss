@@ -1,0 +1,36 @@
+:global {
+  @import '../../node_modules/uikit/dist/scss/uikit-variables';
+  @import '../../node_modules/uikit/dist/scss/uikit-mixins';
+  @import '../../node_modules/uikit/dist/scss/uikit';
+  @import './animations';
+  @import './react-select-custom';
+
+  .dhx_cal_event {
+    cursor: pointer !important;
+    opacity: 0.85;
+  }
+  .dhx_title {
+    cursor: pointer;
+  }
+  .dhx_cal_event:hover, .dhx_cal_title:hover {
+    opacity: 1;
+  }
+
+  .Select-menu {
+    height: 110px;
+  }
+
+  .Select--multi .Select-value-icon {
+    padding: 0 4px;
+  }
+
+  .visible {
+    overflow: visible;
+  }
+
+  .hidden {
+    overflow: hidden;
+  }
+}
+
+

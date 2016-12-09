@@ -1,0 +1,30 @@
+@import "../../../../base_scss/all_base_files";
+
+.fu-loginForm {
+  margin-top: 200px;
+  .fu-loginForm__input {
+    color: $gray;
+    font-size: 15px;
+  }
+  .fu-loginForm__inputLabel {
+    background: linear-gradient($scooter, $shamrock);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .fu-loginForm__button {
+    height: 30px;
+    margin-top: 20px;
+    color: $white;
+    background: linear-gradient(rgba(47, 151, 156, 0.93), rgba(67, 203, 186, 0.67));
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border: 1px solid #9fcabd;
+    border-radius: 4px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

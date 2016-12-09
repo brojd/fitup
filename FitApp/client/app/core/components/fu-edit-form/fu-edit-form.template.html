@@ -1,0 +1,277 @@
+<div [ngSwitch]="formID">
+
+	<form class="uk-form-horizontal uk-animation-slide-right" *ngSwitchCase=1 #form="ngForm"
+	      (ngSubmit)="editTrainer(form.value)">
+		<fieldset class="fu-fieldset uk-border-rounded">
+			<legend class="fu-fieldset__legend uk-border-rounded">EDIT TRAINER</legend>
+			<div class="uk-form-row uk-align-center uk-width-9-10 uk-margin-top">
+				<label class="uk-align-left uk-width-3-10" for="name">Name:</label>
+				<input class="uk-width-6-10 fu-fieldset__inputText" type="text" id="name" name="name"
+				       [(ngModel)]="currentTrainer.name" #name="ngModel" minlength=2 maxlength=20 required>
+				<div class="uk-alert uk-alert-danger uk-width-10-10" [hidden]="name.valid  || name.pristine">
+					<span class="uk-width-8-10 uk-align-center">
+						Name should be composed of 2 - 20 letters
+					</span>
+				</div>
+			</div>
+			<div class="uk-form-row uk-align-center uk-width-9-10 uk-margin-top">
+				<label class="uk-align-left uk-width-3-10" for="surname">Surname:</label>
+				<input class="uk-width-6-10 fu-fieldset__inputText" type="text" id="surname" name="surname"
+				       [(ngModel)]="currentTrainer.surname" #surname="ngModel" minlength=2 maxlength=20 required>
+				<div class="uk-alert uk-alert-danger uk-width-10-10" [hidden]="surname.valid  || surname.pristine">
+					<span class="uk-width-8-10 uk-align-center">
+						Surname should be composed of 2 - 20 letters
+					</span>
+				</div>
+			</div>
+			<div class="uk-form-row uk-align-center uk-width-9-10">
+				<label class="uk-align-left uk-width-3-10" for="about_me">About me:</label>
+				<textarea class="uk-width-6-10 fu-fieldset__inputText" id="about_me" name="about_me"
+				          [(ngModel)]="currentTrainer.about_me" maxlength=1500>
+				</textarea>
+			</div>
+			<div class="uk-form-row uk-align-center uk-width-9-10">
+				<div>Specialties:</div>
+				<div class="uk-margin-left" *ngFor="let specialty of specialties" ngModelGroup="specialties">
+					<input type="checkbox"
+				       [(ngModel)]="currentTrainer.specialties[specialty]" [name]="specialty">{{specialty}}
+				</div>
+			</div>
+			<div class="uk-form-row uk-align-center uk-width-9-10">
+				<label class="uk-align-left uk-width-3-10" for="photo_url">Photo URL:</label>
+				<input class="uk-width-6-10 fu-fieldset__inputText" type="text" id="photo_url" name="photo_url"
+				       [(ngModel)]="currentTrainer.photo_url" #photo_url="ngModel">
+			</div>
+			<div>
+				<img *ngIf="isValidURL(photo_url)" class="uk-thumbnail-small uk-align-center fu-fieldset__thumbnail"
+			         [src]="photo_url.value" [alt]="currentTrainer.name">
+				<div class="uk-alert uk-alert-danger uk-width-10-10" [hidden]="isValidURL(photo_url) || photo_url.pristine">
+					<span class="uk-width-3-10 uk-align-center">
+						URL is not valid
+					</span>
+				</div>
+				<div class="uk-alert uk-alert-danger uk-width-10-10"
+				     [hidden]="hasProperSize(photo_url, 0.8, 1) || photo_url.pristine">
+						<span class="uk-width-3-10 uk-align-center">
+							Image should has resolution between 4:5 and 5:5
+						</span>
+				</div>
+			</div>
+			<button class="uk-align-center uk-button uk-border-rounded fu-fieldset__saveButton" type="submit"
+			        [disabled]="!form.valid || !hasProperSize(photo_url, 0.8, 1)">
+				Save
+			</button>
+			<div class="uk-width-6-10 uk-align-center uk-alert uk-alert-danger"
+			     *ngIf="!(trainerSaveSuccess === 2 || trainerSaveSuccess === 1)"> {{saveSuccess}}
+				<span class="uk-align-center uk-width-5-10">Save failed</span>
+			</div>
+			<div class="uk-width-6-10 uk-align-center uk-alert uk-alert-success"
+			     *ngIf="!(trainerSaveSuccess === 2 || trainerSaveSuccess === 0)">
+				<span class="uk-align-center uk-width-5-10">Successfully saved</span>
+			</div>
+		</fieldset>
+	</form>
+
+	<div *ngSwitchCase=2 class="fu-addTrainer">
+		<ul class="uk-tab fu-tab" data-uk-tab>
+			<li class="fu-tab__listElem">
+				<a class="fu-tab__anchor" [routerLink]="['/trainers']">ALL TRAINERS</a>
+			</li>
+			<li class="uk-active fu-tab__listElem uk-margin-left">
+				<a class="fu-tab__anchor" [routerLink]="['/addtrainer']">ADD NEW TRAINER</a>
+			</li>
+		</ul>
+		<form class="uk-form-horizontal uk-width-5-10 uk-margin-large-top uk-animation-slide-right"
+		      #form="ngForm" (ngSubmit)="addTrainer(form.value)">
+			<fieldset class="fu-fieldset uk-border-rounded">
+				<legend class="fu-fieldset__legend uk-border-rounded">ADD NEW TRAINER</legend>
+				<div class="uk-form-row uk-align-center uk-width-9-10 uk-margin-top">
+					<label class="uk-align-left uk-width-3-10" for="name">Name:</label>
+					<input class="uk-width-6-10 fu-fieldset__inputText" type="text" id="name" name="name" ngModel
+					       #name="ngModel" minlength=2 maxlength=20 required>
+					<div class="uk-alert uk-alert-danger uk-width-10-10" [hidden]="name.valid || name.pristine">
+						<span class="uk-width-5-10 uk-align-center">
+							Name should be composed of 2 - 20 letters
+						</span>
+					</div>
+				</div>
+				<div class="uk-form-row uk-align-center uk-width-9-10 uk-margin-top">
+					<label class="uk-align-left uk-width-3-10" for="surname">Surname:</label>
+					<input class="uk-width-6-10 fu-fieldset__inputText" type="text" id="surname" name="surname" ngModel
+					       #surname="ngModel" minlength=2 maxlength=20 required>
+					<div class="uk-alert uk-alert-danger uk-width-10-10" [hidden]="surname.valid || surname.pristine">
+						<span class="uk-width-5-10 uk-align-center">
+							Surname should be composed of 2 - 20 letters
+						</span>
+					</div>
+				</div>
+				<div class="uk-form-row uk-align-center uk-width-9-10">
+					<label class="uk-align-left uk-width-3-10" for="about_me">About me:</label>
+					<textarea class="uk-width-6-10 fu-fieldset__inputText" id="about_me" name="about_me" ngModel
+					          maxlength=1500>
+					</textarea>
+				</div>
+				<div class="uk-form-row uk-margin uk-width-4-5 uk-align-center">
+					<div class="uk-width-2-6">Specialties:</div>
+					<div *ngFor="let specialty of specialties" ngModelGroup="specialties">
+						<input class="uk-width-1-6 uk-vertical-align-middle" type="checkbox" [name]="specialty" ngModel>
+						{{specialty}}
+					</div>
+				</div>
+				<div class="uk-form-row uk-align-center uk-width-9-10">
+					<label class="uk-align-left uk-width-3-10" for="photo_url">Photo URL:</label>
+					<input class="uk-width-6-10 fu-fieldset__inputText" type="text" id="photo_url" name="photo_url"
+					       #photo_url="ngModel" ngModel>
+				</div>
+				<div class="uk-align-center">
+					<img *ngIf="isValidURL(photo_url) && photo_url.value" class="uk-thumbnail-small uk-align-center fu-fieldset__thumbnail"
+					     [src]="photo_url.value" [alt]="form.value.name">
+					<div class="uk-alert uk-alert-danger uk-width-10-10"
+					     [hidden]="isValidURL(photo_url) || photo_url.pristine">
+						<span class="uk-width-3-10 uk-align-center">
+							URL is not valid
+						</span>
+					</div>
+					<div class="uk-alert uk-alert-danger uk-width-10-10"
+					     [hidden]="hasProperSize(photo_url, 0.8, 1) || photo_url.pristine">
+						<span class="uk-width-3-10 uk-align-center">
+							Image should has resolution between 4:5 and 5:5
+						</span>
+					</div>
+				</div>
+				<button class="uk-align-center uk-button uk-border-rounded fu-fieldset__saveButton"
+				        type="submit" [disabled]="!form.valid || !hasProperSize(photo_url, 0.8, 1)">
+					Save
+				</button>
+				<div class="uk-width-6-10 uk-align-center uk-alert uk-alert-danger"
+				     *ngIf="!(trainerSaveSuccess === 2 || trainerSaveSuccess === 1)"> {{saveSuccess}}
+					<span class="uk-align-center uk-width-3-10">Save failed</span>
+				</div>
+				<div class="uk-width-6-10 uk-align-center uk-alert uk-alert-success"
+				     *ngIf="!(trainerSaveSuccess === 2 || trainerSaveSuccess === 0)">
+					<span class="uk-align-center uk-width-3-10">Successfully saved</span>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+
+	<form class="uk-form-horizontal uk-animation-slide-right" *ngSwitchCase=3 #form="ngForm"
+	      (ngSubmit)="editClasses(form.value)">
+		<fieldset class="fu-fieldset uk-border-rounded">
+			<legend class="fu-fieldset__legend uk-border-rounded">EDIT CLASSES</legend>
+			<div class="uk-form-row uk-align-center uk-width-9-10 uk-margin-top">
+				<label class="uk-align-left uk-width-3-10" for="name">Name:</label>
+				<input class="uk-width-6-10 fu-fieldset__inputText" type="text" id="name" name="name"
+				       [(ngModel)]="currentClasses.name" #name="ngModel" minlength=2 maxlength=20 required>
+				<div class="uk-alert uk-alert-danger uk-width-10-10" [hidden]="name.valid || name.pristine">
+					<span class="uk-width-8-10 uk-align-center">
+						Name should be composed of 2 - 20 letters
+					</span>
+				</div>
+			</div>
+			<div class="uk-form-row uk-align-center uk-width-9-10">
+				<label class="uk-align-left uk-width-3-10" for="name">Description:</label>
+				<textarea class="uk-width-6-10 fu-fieldset__inputText" id="description" name="description"
+				          [(ngModel)]="currentClasses.description" maxlength=1500>
+				</textarea>
+			</div>
+			<div class="uk-form-row uk-align-center uk-width-9-10">
+				<label class="uk-align-left uk-width-3-10" for="photo_url">Photo URL:</label>
+				<input class="uk-width-6-10 fu-fieldset__inputText" type="text" id="photo_url" name="photo_url"
+				       [(ngModel)]="currentClasses.photo_url" #photo_url="ngModel">
+			</div>
+			<div>
+				<img *ngIf="isValidURL(photo_url)" class="uk-thumbnail-small uk-align-center fu-fieldset__thumbnail"
+				     [src]="photo_url.value" [alt]="currentClasses.name">
+				<div class="uk-alert uk-alert-danger uk-width-10-10"
+				     [hidden]="isValidURL(photo_url) || photo_url.pristine">
+					<span class="uk-width-3-10 uk-align-center">
+						URL is not valid
+					</span>
+				</div>
+				<div class="uk-alert uk-alert-danger uk-width-10-10"
+				     [hidden]="hasProperSize(photo_url, 1.33, 1.67) || photo_url.pristine">
+						<span class="uk-width-3-10 uk-align-center">
+							Image should has resolution between 4:3 and 5:3
+						</span>
+				</div>
+			</div>
+			<button class="uk-align-center uk-button uk-border-rounded fu-fieldset__saveButton"
+			        type="submit" [disabled]="!form.valid || !hasProperSize(photo_url, 1.33, 1.67)">Save</button>
+			<div class="uk-width-6-10 uk-align-center uk-alert uk-alert-danger"
+			     *ngIf="!(classesSaveSuccess === 2 || classesSaveSuccess === 1)">
+				<span class="uk-align-center uk-width-5-10">Save failed</span>
+			</div>
+			<div class="uk-width-6-10 uk-align-center uk-alert uk-alert-success"
+			     *ngIf="!(classesSaveSuccess === 2 || classesSaveSuccess === 0)">
+				<span class="uk-align-center uk-width-5-10">Successfully saved</span>
+			</div>
+		</fieldset>
+	</form>
+
+	<div *ngSwitchCase=4 class="fu-addClasses">
+		<ul class="uk-tab fu-tab" data-uk-tab>
+			<li class="fu-tab__listElem">
+				<a class="fu-tab__anchor" [routerLink]="['/classes']">ALL CLASSES</a>
+			</li>
+			<li class="uk-active fu-tab__listElem uk-margin-left">
+				<a class="fu-tab__anchor" [routerLink]="['/addClasses']">ADD NEW CLASSES</a>
+			</li>
+		</ul>
+		<form class="uk-form-horizontal uk-width-5-10 uk-margin-large-top uk-animation-slide-right"
+		      #form="ngForm" (ngSubmit)="addClasses(form.value)">
+			<fieldset class="fu-fieldset uk-border-rounded">
+				<legend class="fu-fieldset__legend uk-border-rounded">ADD NEW CLASSES</legend>
+				<div class="uk-form-row uk-align-center uk-width-9-10 uk-margin-top">
+					<label class="uk-align-left uk-width-3-10" for="name">Name:</label>
+					<input class="uk-width-6-10 fu-fieldset__inputText" type="text" id="name" name="name" ngModel
+					       #name="ngModel" minlength=2 maxlength=20 required>
+					<div class="uk-alert uk-alert-danger uk-width-10-10" [hidden]="name.valid || name.pristine">
+						<span class="uk-width-5-10 uk-align-center">
+							Name should be composed of 2 - 20 letters
+						</span>
+					</div>
+				</div>
+				<div class="uk-form-row uk-align-center uk-width-9-10">
+					<label class="uk-align-left uk-width-3-10" for="description">Description:</label>
+					<textarea class="uk-width-6-10 fu-fieldset__inputText" id="description" name="description"
+					          ngModel maxlength=1500>
+					</textarea>
+				</div>
+				<div class="uk-form-row uk-align-center uk-width-9-10">
+					<label class="uk-align-left uk-width-3-10" for="photo_url">Photo URL:</label>
+					<input class="uk-width-6-10 fu-fieldset__inputText" type="text" id="photo_url"
+					       name="photo_url" #photo_url="ngModel" ngModel>
+				</div>
+				<div class="uk-align-center">
+					<img *ngIf="isValidURL(photo_url) && photo_url.value" class="uk-thumbnail-small uk-align-center fu-fieldset__thumbnail"
+					     [src]="photo_url.value" [alt]="form.value.name">
+					<div class="uk-alert uk-alert-danger uk-width-10-10"
+					     [hidden]="isValidURL(photo_url) || photo_url.pristine">
+						<span class="uk-width-3-10 uk-align-center">
+							URL is not valid
+						</span>
+					</div>
+					<div class="uk-alert uk-alert-danger uk-width-10-10"
+					     [hidden]="hasProperSize(photo_url, 1.33, 1.67) || photo_url.pristine">
+						<span class="uk-width-3-10 uk-align-center">
+							Image should has resolution between 4:3 and 5:3
+						</span>
+					</div>
+				</div>
+				<button class="uk-align-center uk-button uk-border-rounded fu-fieldset__saveButton"
+				        type="submit" [disabled]="!form.valid || !hasProperSize(photo_url, 1.33, 1.67)">
+					Save
+				</button>
+				<div class="uk-width-6-10 uk-align-center uk-alert uk-alert-danger"
+				     *ngIf="!(classesSaveSuccess === 2 || classesSaveSuccess === 1)"> {{saveSuccess}}
+					<span class="uk-align-center uk-width-3-10">Save failed</span>
+				</div>
+				<div class="uk-width-6-10 uk-align-center uk-alert uk-alert-success"
+				     *ngIf="!(classesSaveSuccess === 2 || classesSaveSuccess === 0)">
+					<span class="uk-align-center uk-width-3-10">Successfully saved</span>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>

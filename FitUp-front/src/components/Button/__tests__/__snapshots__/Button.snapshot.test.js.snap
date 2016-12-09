@@ -1,0 +1,11 @@
+exports[`test Button renders correctly with given props 1`] = `
+<button
+  autoFocus={false}
+  className="uk-button Button"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+  value={undefined}>
+  Press
+</button>
+`;

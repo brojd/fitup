@@ -1,0 +1,126 @@
+exports[`test GymsListElem renders correctly 1`] = `
+<table
+  className="uk-width-10-10 uk-table gymTable">
+  <thead>
+    <tr>
+      <th
+        className="uk-text-center gymTable__mainHeading"
+        colSpan={5}>
+        Fitness World
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td
+        className="uk-width-3-10 uk-table-middle gymTable__td">
+        <img
+          alt="gym logo"
+          className="uk-thumbnail uk-align-center currentImg"
+          height={150}
+          onClick={undefined}
+          src="http://www.fru-fitness.pl/content/57/0/1370494719_6ca505f63f8064d96281ac502dd903f2.jpg"
+          width={650} />
+      </td>
+      <td
+        className="uk-width-2-10 gymTable__td">
+        <ul
+          className="uk-list">
+          <h4
+            className="gymTable__heading">
+            Fitness World
+          </h4>
+          <img
+            alt="gym_logo"
+            className="uk-float-right uk-width-3-10"
+            height={150}
+            onClick={undefined}
+            src="http://www.feriogaj.com/wp-content/uploads/fitnes-world.png"
+            width={150} />
+          <li
+            className="uk-width-4-10 uk-float-left">
+            Olszowa
+             
+            3
+            ,
+          </li>
+          <li
+            className="uk-width-4-10 uk-float-left">
+            Wrocław
+          </li>
+          <div
+            className="uk-clearfix" />
+        </ul>
+        <ul
+          className="uk-list">
+          <h4
+            className="gymTable__heading">
+            Pricing:
+          </h4>
+          <li>
+            <div>
+              1 workout
+              : 
+              15
+               PLN
+            </div>
+            <div>
+              1 hour
+              : 
+              40
+               PLN
+            </div>
+            <div>
+              1 month
+              : 
+              130
+               PLN
+            </div>
+          </li>
+        </ul>
+        <ul
+          className="uk-list">
+          <h4
+            className="gymTable__heading">
+            Cards accepted:
+          </h4>
+          <li>
+            <div
+              className="uk-badge uk-margin-small-right uk-margin-small-bottom uk-width-3-10">
+              FitWro
+            </div>
+          </li>
+        </ul>
+      </td>
+      <td
+        className="uk-width-3-10 gymTable__td">
+        <h4
+          className="gymTable__heading">
+          Description:
+        </h4>
+        <p
+          className="uk-text uk-text-break uk-panel uk-panel-box">
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </td>
+      <td
+        className="uk-width-3-10 gymTable__td">
+        <img
+          alt="Fitness World photo"
+          className="uk-thumbnail uk-float-left thumbnail"
+          height={150}
+          onClick={[Function]}
+          src="http://www.fru-fitness.pl/content/57/0/1370494719_6ca505f63f8064d96281ac502dd903f2.jpg"
+          width={108} />
+        <img
+          alt="Fitness World photo"
+          className="uk-thumbnail uk-float-left thumbnail"
+          height={150}
+          onClick={[Function]}
+          src="http://www.top-gym.pl/files/dzialy/wydarzenia/lipiec%202015/Art%20Fitness2.png"
+          width={108} />
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

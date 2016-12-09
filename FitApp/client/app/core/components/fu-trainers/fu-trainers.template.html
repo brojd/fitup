@@ -1,0 +1,36 @@
+<div class="fu-trainers">
+	<ul class="uk-tab fu-tab" data-uk-tab>
+		<li class="uk-active fu-tab__listElem">
+			<a class="fu-tab__anchor" [routerLink]="['/trainers']">ALL TRAINERS</a>
+		</li>
+		<li class="fu-tab__listElem uk-margin-left">
+			<a class="fu-tab__anchor" [routerLink]="['/addTrainer']">ADD NEW TRAINER</a>
+		</li>
+	</ul>
+	<table class="uk-table fu-listOfTrainers uk-animation-slide-right">
+		<thead class="fu-listOfTrainers__tableHead">
+			<tr>
+				<th class="fu-listOfTrainers__th">Trainer</th>
+				<th class="fu-listOfTrainers__th">Specialties</th>
+				<th class="fu-listOfTrainers__th uk-text-right">Modify</th>
+			</tr>
+		</thead>
+		<tbody class="fu-listOfTrainers__tbody">
+			<tr class="fu-listOfTrainers__tr" *ngFor="let trainer of trainers">
+				<td class="uk-width-3-10 fu-listOfTrainers__td">
+					<img src="{{trainer.photo_url}}" class="fu-listOfTrainers__miniPhoto uk-border-circle uk-margin-right">
+					{{trainer.name}} {{trainer.surname}}
+				</td>
+				<td class="uk-width-2-10 fu-listOfTrainers__td">
+					<ul class="fu-listOfTrainers__specialties" *ngFor="let class of classes">
+						<li *ngIf="trainer.specialties[class.name]">{{class.name}}</li>
+					</ul>
+				</td>
+				<td class="uk-width-5-10 fu-listOfTrainers__td uk-text-right">
+					<button class="uk-button-small uk-button uk-border-rounded fu-listOfTrainers__editButton" (click)="passData(1, trainer)">Edit</button>
+					<button class="uk-button-small uk-button uk-border-rounded fu-listOfTrainers__deleteButton" (click)="deleteTrainer(trainer._id)">Delete</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

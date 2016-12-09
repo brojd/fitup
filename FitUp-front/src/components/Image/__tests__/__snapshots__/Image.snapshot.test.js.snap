@@ -1,0 +1,9 @@
+exports[`test Image renders correctly with given props 1`] = `
+<img
+  alt="travel_image"
+  className="Image"
+  height={200}
+  onClick={[Function]}
+  src="https://cdn.pixabay.com/photo/2016/10/20/17/41/travel-1756150_960_720.jpg"
+  width={300} />
+`;

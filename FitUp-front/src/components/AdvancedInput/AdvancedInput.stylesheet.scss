@@ -1,0 +1,9 @@
+@import "../../../sass_variables/colors";
+@import "../../../sass_variables/widths";
+
+.advancedInputWrapper {
+  margin-top: 3 * $whitespace;
+}
+.advancedInput {
+  margin-left: -1%;
+}

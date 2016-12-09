@@ -1,0 +1,48 @@
+@import "../../../../base_scss/all_base_files";
+
+.fu-classes {
+  padding: 50px 0 0 150px;
+  color: $gray;
+  .fu-tab * {
+    color: $quill_gray;
+  }
+  .fu-tab__listElem:hover .fu-tab__anchor, .fu-tab__listElem.uk-active .fu-tab__anchor {
+    color: $gray;
+    border-bottom: 1px solid $shamrock;
+  }
+  .fu-listOfClasses__miniPhoto {
+    width: 50px;
+    height: auto;
+  }
+  .fu-listOfClasses__tableHead {
+    border-bottom: 1px solid $quill_gray;
+  }
+  .fu-listOfClasses__td {
+    vertical-align: baseline;
+  }
+  .fu-listOfClasses__tr {
+    border-bottom: 1px solid $quill_gray;
+  }
+  .fu-listOfClasses__tbody {
+    color: $silver_chalice;
+  }
+  .fu-listOfClasses__editButton {
+    background: $ghost;
+    color: $clear_day;
+  }
+  .fu-listOfClasses__deleteButton {
+    background: rgba($red_orange, 0.66);
+    color: $clear_day;
+  }
+  .fu-listOfClasses__deleteButton:not(:hover), .fu-listOfClasses__editButton:not(:hover) {
+    animation: removeBoxShadow 0.2s forwards, moveDown 0.2s forwards;
+  }
+  .fu-listOfClasses__editButton:hover {
+    background: $gray;
+    animation: giveBottomShadow 0.2s forwards, moveUp 0.2s forwards;
+  }
+  .fu-listOfClasses__deleteButton:hover {
+    background: $torch_red;
+    animation: giveBottomShadow 0.2s forwards, moveUp 0.2s forwards;
+  }
+}

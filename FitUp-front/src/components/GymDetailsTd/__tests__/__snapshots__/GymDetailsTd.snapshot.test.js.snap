@@ -1,0 +1,80 @@
+exports[`test GymDetailsTd renders correctly with given gym property 1`] = `
+<td
+  className="uk-width-2-10 gymTable__td">
+  <ul
+    className="uk-list">
+    <h4
+      className="gymTable__heading">
+      Fitness Academy
+    </h4>
+    <img
+      alt="gym_logo"
+      className="uk-float-right uk-width-3-10"
+      height={150}
+      onClick={undefined}
+      src="https://pbs.twimg.com/profile_images/378800000513930765/1518318ade4947d639fca13c47b457f6.jpeg"
+      width={150} />
+    <li
+      className="uk-width-4-10 uk-float-left">
+      Długa
+       
+      3
+      ,
+    </li>
+    <li
+      className="uk-width-4-10 uk-float-left">
+      Wrocław
+    </li>
+    <div
+      className="uk-clearfix" />
+  </ul>
+  <ul
+    className="uk-list">
+    <h4
+      className="gymTable__heading">
+      Pricing:
+    </h4>
+    <li>
+      <div>
+        1 workout
+        : 
+        15
+         PLN
+      </div>
+      <div>
+        1 hour
+        : 
+        40
+         PLN
+      </div>
+      <div>
+        1 month
+        : 
+        130
+         PLN
+      </div>
+    </li>
+  </ul>
+  <ul
+    className="uk-list">
+    <h4
+      className="gymTable__heading">
+      Cards accepted:
+    </h4>
+    <li>
+      <div
+        className="uk-badge uk-margin-small-right uk-margin-small-bottom uk-width-3-10">
+        Multisport
+      </div>
+      <div
+        className="uk-badge uk-margin-small-right uk-margin-small-bottom uk-width-3-10">
+        ActiveSport
+      </div>
+      <div
+        className="uk-badge uk-margin-small-right uk-margin-small-bottom uk-width-3-10">
+        OKsystem
+      </div>
+    </li>
+  </ul>
+</td>
+`;

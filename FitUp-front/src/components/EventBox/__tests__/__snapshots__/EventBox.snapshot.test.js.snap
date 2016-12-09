@@ -1,0 +1,42 @@
+exports[`test EventBox renders correctly 1`] = `
+<aside
+  className="eventDetails uk-width-2-10 fadeInFast"
+  style={
+    Object {
+      "left": -200,
+      "top": 580,
+    }
+  }>
+  <div
+    className="classesImgWrapper">
+    <img
+      alt="pilates"
+      className="uk-width-9-10 uk-align-center classesImgWrapper__classesImg"
+      height={150}
+      onClick={undefined}
+      src="http://fitnessforladies.pl/wp-content/uploads/2013/12/pilates-640x504.jpg"
+      width={150} />
+    <div
+      className="classesImgWrapper__durationBack">
+      <span
+        className="classesImgWrapper__durationText">
+        50
+         min
+      </span>
+    </div>
+    <div
+      className="classesImgWrapper__time">
+      15:50
+       - 
+      16:40
+    </div>
+  </div>
+  <div
+    className="classesInfoWrapper uk-width-9-10 uk-align-center">
+    <h3
+      className="classesInfoWrapper__header uk-text-center uk-width-5-10 uk-align-center">
+      pilates
+    </h3>
+  </div>
+</aside>
+`;

@@ -1,0 +1,172 @@
+exports[`test TrainersListElem renders correctly 1`] = `
+<ul
+  className="uk-align-center uk-width-8-10 uk-margin-large-top uk-list">
+  <li
+    className="trainersListElem uk-float-left trainerInLeft uk-width-7-10">
+    <h1
+      className="backName">
+      Sabina
+    </h1>
+    <img
+      alt="trainer_photo"
+      className="trainerPhoto"
+      height={150}
+      onClick={undefined}
+      src="http://muzeumpmw.pl/wp-content/uploads/2012/09/wpid-trener-personalny-dobrym-wsparciem-w-czasie-odchudzania-081d858b1d0db5ecb5c2a450ef04253c.jpg"
+      width={150} />
+    <div
+      className="backPhotoWrapper">
+      <img
+        alt="trainer_back_photo"
+        className="trainerBackPhoto"
+        height={150}
+        onClick={undefined}
+        src="http://muzeumpmw.pl/wp-content/uploads/2012/09/wpid-trener-personalny-dobrym-wsparciem-w-czasie-odchudzania-081d858b1d0db5ecb5c2a450ef04253c.jpg"
+        width={150} />
+    </div>
+    <section
+      className="detailsWrapper uk-width-6-10">
+      <h2
+        className="trainerName">
+        Sabina Nowak
+      </h2>
+      <h5>
+        <img
+          alt="gym_logo"
+          className="uk-margin-small-right"
+          height={150}
+          onClick={undefined}
+          src="https://pbs.twimg.com/profile_images/378800000513930765/1518318ade4947d639fca13c47b457f6.jpeg"
+          width={35} />
+        Fitness Academy
+        , 
+        Wrocław
+      </h5>
+      <p
+        className="uk-text uk-text-break aboutMe">
+        Lorem ipsum dolor sit amet
+      </p>
+      <ul>
+        <div
+          className="uk-margin-small-right uk-margin-small-bottom uk-width-2-10 specialty">
+          pilates
+        </div>
+      </ul>
+    </section>
+  </li>
+  <li
+    className="trainersListElem uk-float-right trainerInRight uk-width-7-10">
+    <h1
+      className="backName">
+      Peter
+    </h1>
+    <img
+      alt="trainer_photo"
+      className="trainerPhoto"
+      height={150}
+      onClick={undefined}
+      src="http://www.treningi-personalne.com/images/Jakub-Kulej-trener-personalny-500.jpg"
+      width={150} />
+    <div
+      className="backPhotoWrapper">
+      <img
+        alt="trainer_back_photo"
+        className="trainerBackPhoto"
+        height={150}
+        onClick={undefined}
+        src="http://www.treningi-personalne.com/images/Jakub-Kulej-trener-personalny-500.jpg"
+        width={150} />
+    </div>
+    <section
+      className="detailsWrapper uk-width-6-10">
+      <h2
+        className="trainerName">
+        Peter Nowicki
+      </h2>
+      <h5>
+        <img
+          alt="gym_logo"
+          className="uk-margin-small-right"
+          height={150}
+          onClick={undefined}
+          src="https://pbs.twimg.com/profile_images/378800000513930765/1518318ade4947d639fca13c47b457f6.jpeg"
+          width={35} />
+        Fitness Academy
+        , 
+        Wrocław
+      </h5>
+      <p
+        className="uk-text uk-text-break aboutMe">
+        Lorem ipsum dolor sit amet
+      </p>
+      <ul>
+        <div
+          className="uk-margin-small-right uk-margin-small-bottom uk-width-2-10 specialty">
+          zumba
+        </div>
+        <div
+          className="uk-margin-small-right uk-margin-small-bottom uk-width-2-10 specialty">
+          pilates
+        </div>
+      </ul>
+    </section>
+  </li>
+  <li
+    className="trainersListElem uk-float-left trainerInLeft uk-width-7-10">
+    <h1
+      className="backName">
+      Konrad
+    </h1>
+    <img
+      alt="trainer_photo"
+      className="trainerPhoto"
+      height={150}
+      onClick={undefined}
+      src="http://www.znanytrener.pl/wp-content/uploads/image/2011/09/pawel-247x300.jpg"
+      width={150} />
+    <div
+      className="backPhotoWrapper">
+      <img
+        alt="trainer_back_photo"
+        className="trainerBackPhoto"
+        height={150}
+        onClick={undefined}
+        src="http://www.znanytrener.pl/wp-content/uploads/image/2011/09/pawel-247x300.jpg"
+        width={150} />
+    </div>
+    <section
+      className="detailsWrapper uk-width-6-10">
+      <h2
+        className="trainerName">
+        Konrad Okowski
+      </h2>
+      <h5>
+        <img
+          alt="gym_logo"
+          className="uk-margin-small-right"
+          height={150}
+          onClick={undefined}
+          src="http://www.feriogaj.com/wp-content/uploads/fitnes-world.png"
+          width={35} />
+        Fitness World
+        , 
+        Wrocław
+      </h5>
+      <p
+        className="uk-text uk-text-break aboutMe">
+        Lorem ipsum dolor sit amet
+      </p>
+      <ul>
+        <div
+          className="uk-margin-small-right uk-margin-small-bottom uk-width-2-10 specialty">
+          zumba
+        </div>
+        <div
+          className="uk-margin-small-right uk-margin-small-bottom uk-width-2-10 specialty">
+          TBC
+        </div>
+      </ul>
+    </section>
+  </li>
+</ul>
+`;

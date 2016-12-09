@@ -1,0 +1,31 @@
+@import "../../../sass_variables/colors";
+@import "../../../sass_variables/widths";
+
+.formWrapper {
+  height: 180px;
+}
+
+.filterForm {
+  height: 78px;
+  margin-top: -120px;
+  background: rgba($white, 0.4);
+  padding: 3 * $whitespace;
+  overflow-y: hidden;
+  border: 1px solid rgba(167, 0, 0, 0.26);
+  border-radius: 2px;
+}
+
+.advancedButton {
+  background: linear-gradient(to bottom right, rgb(72, 42, 22), rgb(208, 160, 23)) !important;
+  letter-spacing: 0.3px;
+  color: #f5f5f5 !important;
+  font-size: 10px !important;
+  position: absolute;
+  right: 3 * $whitespace;
+  top: 28px + (2 * $whitespace);
+  z-index: 4;
+  width: 16%;
+  min-height: 17px !important;
+  height: 16px;
+  line-height: 16px !important;
+}

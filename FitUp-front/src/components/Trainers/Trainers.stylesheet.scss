@@ -1,0 +1,12 @@
+@import "../../../sass_variables/colors";
+@import "../../../sass_variables/widths";
+
+.trainerSearch {
+  margin-top: -120px;
+  background: rgba($white, 0.4);
+  padding: 3 * $whitespace;
+  position: relative;
+  height: 77px;
+  border: 1px solid rgba(167, 0, 0, 0.26);
+  border-radius: 2px;
+}

@@ -1,0 +1,38 @@
+<div class="fu-classes">
+	<ul class="uk-tab fu-tab" data-uk-tab>
+		<li class="uk-active fu-tab__listElem">
+			<a class="fu-tab__anchor" [routerLink]="['/classes']">ALL CLASSES</a>
+		</li>
+		<li class="fu-tab__listElem uk-margin-left">
+			<a class="fu-tab__anchor" [routerLink]="['/addClasses']">ADD NEW CLASSES</a>
+		</li>
+	</ul>
+	<table class="uk-table fu-listOfClasses uk-animation-slide-right">
+		<thead class="fu-listOfClasses__tableHead">
+			<tr>
+				<th class="fu-listOfClasses__th">Type of class</th>
+				<th class="fu-listOfClasses__th">Description</th>
+				<th class="fu-listOfClasses__th uk-text-right">Modify</th>
+			</tr>
+		</thead>
+		<tbody class="fu-listOfClasses__tbody">
+		<tr class="fu-listOfClasses__tr" *ngFor="let class of classes">
+			<td class="uk-width-3-10 fu-listOfClasses__td">
+				<img src="{{class.photo_url}}" class="fu-listOfClasses__miniPhoto uk-border-circle uk-margin-right">
+				{{class.name}}
+			</td>
+			<td class="uk-width-4-10 fu-listOfClasses__td">
+				<div class="fu-listOfClasses__description uk-text-truncate">
+					{{class.description}}
+				</div>
+			</td>
+			<td class="uk-width-3-10 fu-listOfClasses__td uk-text-right">
+				<button class="uk-button-small uk-button uk-border-rounded fu-listOfClasses__editButton"
+				        (click)="passData(3, class)">Edit</button>
+				<button class="uk-button-small uk-button uk-border-rounded fu-listOfClasses__deleteButton"
+				        (click)="deleteClasses(class._id)">Delete</button>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</div>

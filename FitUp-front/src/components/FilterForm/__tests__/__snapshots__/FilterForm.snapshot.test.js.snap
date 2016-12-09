@@ -1,0 +1,34 @@
+exports[`test FilterForm renders correctly excluding 3rd party react-select 1`] = `
+<div
+  className="formWrapper">
+  <form
+    className="uk-width-4-10 uk-form-icon uk-align-center filterForm hidden">
+    <select
+      className="uk-float-right citySelect"
+      defaultValue="Wrocław"
+      onChange={[Function]}>
+      <option
+        className="cityOption"
+        value="Wrocław">
+        Wrocław
+      </option>
+    </select>
+    <button
+      autoFocus={false}
+      className="uk-button advancedButton"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+      value={undefined}>
+      Advanced
+    </button>
+    <div
+      className="uk-width-9-10 uk-align-center advancedInputWrapper">
+      <div
+        className="advancedInputWrapper" />
+      <div
+        className="advancedInputWrapper" />
+    </div>
+  </form>
+</div>
+`;

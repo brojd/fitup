@@ -1,0 +1,95 @@
+@import "../../../../base_scss/all_base_files";
+
+.fu-main {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  & .fu-nav {
+    background: $scooter;
+    background: linear-gradient($scooter, $shamrock);
+    height:100%;
+    width: 130px;
+    transition: all 1s;
+    &:hover {
+      width: 200px;
+    }
+    &:hover .fu-nav__icon {
+      animation-name: moveLeft;
+      animation-duration: 1.4s;
+      animation-fill-mode: forwards;
+    }
+    &:not(:hover) .fu-nav__icon {
+      animation-name: moveRight;
+      animation-duration: 1.4s;
+      animation-fill-mode: forwards;
+    }
+    &:hover .fu-nav__label {
+      animation-name: disappear;
+      animation-duration: 1.4s;
+      animation-fill-mode: forwards;
+    }
+    &:not(:hover) .fu-nav__label {
+      animation-name: appear;
+      animation-duration: 1.4s;
+      animation-fill-mode: forwards;
+    }
+    & .fu-nav__listElem {
+      cursor: pointer;
+      padding-top: 20px;
+    }
+    & .fu-nav__icon {
+      color: $clear_day;
+    }
+    & .fu-nav__label {
+      color: $clear_day;
+      position: relative;
+      left: 70px;
+      top: -27px;
+      font-size: 16px;
+      opacity: 1;
+    }
+    & .fu-nav__arrow {
+      margin-right: 15px;
+      opacity: 0;
+    }
+    & .fu-nav__listElem:hover .fu-nav__arrow {
+      opacity: 1;
+    }
+    & .fu-nav__listElem:hover {
+      animation-name: highlightOn;
+      animation-duration: 0.6s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes moveLeft {
+  from {margin-left: 45px;}
+  to {margin-left: 15px;}
+}
+
+@keyframes moveRight {
+  from {margin-left: 15px;}
+  to {margin-left: 45px;}
+}
+
+@keyframes disappear {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes appear {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@keyframes highlightOn {
+  from {background: rgba(105, 132, 122, 0)}
+  to {background: rgba(105, 132, 122, 0.4)}
+}
+
+@keyframes highlightOff {
+  from {background: rgba(105, 132, 122, 0.4)}
+  to {background: rgba(105, 132, 122, 0)}
+}

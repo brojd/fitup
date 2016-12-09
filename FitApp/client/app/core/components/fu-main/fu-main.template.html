@@ -1,0 +1,33 @@
+<main class="fu-main uk-width-10-10">
+	<nav *ngIf="loggedIn()" class="uk-nav fu-nav uk-width-1-10 uk-float-left uk-position-absolute uk-position-z-index">
+		<ul class="uk-padding-remove">
+			<li [routerLink]="['/']" class="fu-nav__listElem">
+				<a class="fu-nav__icon uk-icon-large uk-icon-dashboard"
+				   [ngClass]="{iconHovered: navIconHovered}">
+				</a>
+				<span class="fu-nav__label"><span class="fu-nav__arrow uk-icon-caret-right"></span>Dashboard</span>
+			</li>
+			<li [routerLink]="['/classes']" class="uk-margin-large fu-nav__listElem">
+				<a class="fu-nav__icon uk-icon-large uk-icon-edit">
+				</a>
+				<span class="fu-nav__label"><span class="fu-nav__arrow uk-icon-caret-right"></span>Classes</span>
+			</li>
+			<li [routerLink]="['/trainers']" class="uk-margin-large fu-nav__listElem">
+				<a class="fu-nav__icon uk-icon-large uk-icon-group">
+				</a>
+				<span class="fu-nav__label"><span class="fu-nav__arrow uk-icon-caret-right"></span>Trainers</span>
+			</li>
+			<li [routerLink]="['/schedule']" class="uk-margin-large fu-nav__listElem">
+				<a class="fu-nav__icon uk-icon-large uk-icon-calendar">
+				</a>
+				<span class="fu-nav__label"><span class="fu-nav__arrow uk-icon-caret-right"></span>Schedule</span>
+			</li>
+			<li [routerLink]="['/editGym']" class="uk-margin-large fu-nav__listElem">
+				<a class="fu-nav__icon uk-icon-large uk-icon-home">
+				</a>
+				<span class="fu-nav__label"><span class="fu-nav__arrow uk-icon-caret-right"></span>Edit gym</span>
+			</li>
+		</ul>
+	</nav>
+	<router-outlet></router-outlet>
+</main>

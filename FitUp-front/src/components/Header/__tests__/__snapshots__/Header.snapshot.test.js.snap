@@ -1,0 +1,7 @@
+exports[`test Header renders correctly 1`] = `
+<header
+  className="uk-width-10-10 Header">
+  <div
+    className="childrenWrapper" />
+</header>
+`;

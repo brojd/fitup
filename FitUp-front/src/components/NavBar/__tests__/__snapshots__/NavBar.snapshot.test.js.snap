@@ -1,0 +1,44 @@
+exports[`test NavBar renders correctly 1`] = `
+<nav
+  className="uk-width-10-10 NavBar">
+  <ul
+    className="uk-navbar-nav uk-hidden-small uk-align-center navList someClass">
+    <li
+      className="navList__elem">
+      <a
+        className="navList__anchor"
+        onClick={[Function]}
+        style={Object {}}>
+        schedule
+      </a>
+    </li>
+    <li
+      className="navList__elem">
+      <a
+        className="navList__anchor"
+        onClick={[Function]}
+        style={Object {}}>
+        gyms
+      </a>
+    </li>
+    <li
+      className="navList__elem">
+      <a
+        className="navList__anchor"
+        onClick={[Function]}
+        style={Object {}}>
+        trainers
+      </a>
+    </li>
+    <li
+      className="navList__elem">
+      <a
+        className="navList__anchor"
+        onClick={[Function]}
+        style={Object {}}>
+        BMI calculator
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

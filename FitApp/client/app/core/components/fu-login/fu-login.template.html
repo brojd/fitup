@@ -1,0 +1,18 @@
+<form class="uk-align-center uk-width-2-10 uk-form fu-loginForm"
+      #form="ngForm"
+      (ngSubmit)="doLogin(form.value.email, form.value.password)">
+	<div class="fu-loginForm__input uk-form-row">
+		<span class="uk-width-3-10 fu-loginForm__inputLabel">E-mail</span>
+		<input class="uk-float-right uk-width-7-10 fu-loginForm__input" type="email" name="email" ngModel/>
+	</div>
+	<div class="fu-loginForm__input uk-form-row">
+		<span class="uk-width-3-10 fu-loginForm__inputLabel">Password</span>
+		<input class="uk-float-right uk-width-7-10 fu-loginForm__input" type="password" name="password" ngModel/>
+	</div>
+	<div>
+		<button class="uk-align-center uk-width-4-10 fu-loginForm__button" type="submit">LOG IN</button>
+	</div>
+	<div class="uk-alert uk-alert-danger uk-width-10-10 uk-text-center" [hidden]="!loginFailed">
+		Login failed
+	</div>
+</form>

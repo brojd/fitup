@@ -1,0 +1,19 @@
+@import "../../../sass_variables/colors";
+@import "../../../sass_variables/widths";
+
+
+.searchBar__input {
+  z-index: 5;
+}
+.searchBar__input * {
+  z-index: 6;
+}
+
+.colorGray {
+  color: $dusty_gray;
+}
+
+::placeholder {
+  color: rgb(232, 232, 232);
+  font-size: 18px;
+}

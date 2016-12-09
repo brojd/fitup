@@ -1,0 +1,55 @@
+exports[`test TrainersListElem renders correctly 1`] = `
+<li
+  className="trainersListElem someClass uk-width-7-10">
+  <h1
+    className="backName">
+    Sabina
+  </h1>
+  <img
+    alt="trainer_photo"
+    className="trainerPhoto"
+    height={150}
+    onClick={undefined}
+    src="http://muzeumpmw.pl/wp-content/uploads/2012/09/wpid-trener-personalny-dobrym-wsparciem-w-czasie-odchudzania-081d858b1d0db5ecb5c2a450ef04253c.jpg"
+    width={150} />
+  <div
+    className="backPhotoWrapper">
+    <img
+      alt="trainer_back_photo"
+      className="trainerBackPhoto"
+      height={150}
+      onClick={undefined}
+      src="http://muzeumpmw.pl/wp-content/uploads/2012/09/wpid-trener-personalny-dobrym-wsparciem-w-czasie-odchudzania-081d858b1d0db5ecb5c2a450ef04253c.jpg"
+      width={150} />
+  </div>
+  <section
+    className="detailsWrapper uk-width-6-10">
+    <h2
+      className="trainerName">
+      Sabina Nowak
+    </h2>
+    <h5>
+      <img
+        alt="gym_logo"
+        className="uk-margin-small-right"
+        height={150}
+        onClick={undefined}
+        src="https://pbs.twimg.com/profile_images/378800000513930765/1518318ade4947d639fca13c47b457f6.jpeg"
+        width={35} />
+      Fitness Academy
+      , 
+      Wrocław
+    </h5>
+    <p
+      className="uk-text uk-text-break aboutMe">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+    </p>
+    <ul>
+      <div
+        className="uk-margin-small-right uk-margin-small-bottom uk-width-2-10 specialty">
+        pilates
+      </div>
+    </ul>
+  </section>
+</li>
+`;
