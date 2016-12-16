@@ -1,0 +1,15 @@
+@keyframes giveBottomShadow {
+  100% {
+    box-shadow: 0 20px 18px -9px #A1A1A1; } }
+
+@keyframes removeBoxShadow {
+  100% {
+    box-shadow: none; } }
+
+@keyframes moveUp {
+  100% {
+    transform: translateY(-3px); } }
+
+@keyframes moveDown {
+  100% {
+    transform: translateY(3px); } }

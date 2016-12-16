@@ -16,9 +16,3 @@ npm-debug.log
 # css, css.map
 *.css
 *.css.map
-
-# fonts
-public/fonts
-
-# images
-*.png
