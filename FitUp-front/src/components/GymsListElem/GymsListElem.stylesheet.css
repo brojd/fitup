@@ -1,0 +1,36 @@
+.gymTable {
+  background: linear-gradient(to top, #ffffff, rgba(136, 136, 136, 0.35));
+  box-shadow: 8px 8px 6px rgba(202, 202, 202, 0.8), 0px 0px 10px #909090;
+  margin-bottom: 50px !important;
+  z-index: 1;
+  border-radius: 4px;
+  color: #4c4c4c;
+  font-size: 13px; }
+
+.gymTable__mainHeading {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(to bottom, rgba(53, 0, 0, 0.81), #a70000);
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 14px; }
+
+.gymTable__td {
+  padding: 21px 21px 21px 0 !important; }
+
+.gymTable__td:first-child {
+  padding-left: 21px !important; }
+
+.gymTable__heading {
+  border-bottom: 1px solid rgba(80, 0, 0, 0.26); }
+
+.thumbnail {
+  cursor: pointer;
+  margin-bottom: 14px !important; }
+
+.thumbnail:nth-child(odd) {
+  margin-right: 14px; }
+
+/*# sourceMappingURL=GymsListElem.stylesheet.css.map */

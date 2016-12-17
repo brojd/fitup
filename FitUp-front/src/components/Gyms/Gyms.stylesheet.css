@@ -1,0 +1,22 @@
+.gymSearch {
+  height: 77px;
+  margin-bottom: 100px !important;
+  margin-top: -120px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 21px;
+  border: 1px solid rgba(167, 0, 0, 0.26);
+  border-radius: 2px; }
+
+.gymsImg1 {
+  position: absolute;
+  left: -260px;
+  top: 250px;
+  z-index: -1; }
+
+.gymsImg2 {
+  position: absolute;
+  right: 0px;
+  top: 900px;
+  z-index: -1; }
+
+/*# sourceMappingURL=Gyms.stylesheet.css.map */

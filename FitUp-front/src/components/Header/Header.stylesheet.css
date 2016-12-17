@@ -1,0 +1,20 @@
+.Header {
+  border-top: 2px solid #FF1B1B; }
+
+.headerLogo {
+  position: absolute;
+  z-index: 3;
+  left: 50px;
+  top: 15px;
+  background: #000000; }
+
+.NavBar {
+  position: relative; }
+
+.fixedHeader {
+  position: fixed;
+  z-index: 6;
+  box-shadow: 0 2px 5px 0 #350000;
+  width: 100vw; }
+
+/*# sourceMappingURL=Header.stylesheet.css.map */

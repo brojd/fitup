@@ -1,0 +1,14 @@
+.searchBar__input {
+  z-index: 5; }
+
+.searchBar__input * {
+  z-index: 6; }
+
+.colorGray {
+  color: #9a9a9a; }
+
+::placeholder {
+  color: #e8e8e8;
+  font-size: 18px; }
+
+/*# sourceMappingURL=SearchBar.stylesheet.css.map */

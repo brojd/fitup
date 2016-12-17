@@ -1,0 +1,13 @@
+@import url(../../../sass_variables/colors.css);
+.scheduleWrapper {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 50px; }
+
+.schedule {
+  position: relative;
+  overflow: hidden; }
+
+/*# sourceMappingURL=Schedule.stylesheet.css.map */

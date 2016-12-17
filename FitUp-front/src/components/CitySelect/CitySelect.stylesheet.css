@@ -1,0 +1,26 @@
+.citySelect {
+  height: 17px;
+  border: none;
+  border-bottom: 2px solid rgba(189, 0, 0, 0.2);
+  color: #f9f9f9;
+  background: linear-gradient(to bottom right, #400000, rgba(169, 0, 0, 0.85));
+  border-radius: 3px;
+  font-size: 11px;
+  z-index: 5;
+  width: 17%; }
+
+.citySelect:hover {
+  cursor: pointer; }
+
+.citySelect:focus {
+  outline: 0; }
+
+.cityOption {
+  color: #000000;
+  background: #FFFFFF;
+  outline: none; }
+
+.cityOption:hover {
+  cursor: pointer; }
+
+/*# sourceMappingURL=CitySelect.stylesheet.css.map */

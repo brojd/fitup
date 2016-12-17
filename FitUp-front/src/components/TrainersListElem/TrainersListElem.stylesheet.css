@@ -1,0 +1,62 @@
+.trainersListElem {
+  margin-bottom: 20px;
+  padding: 60px;
+  background: linear-gradient(to bottom right, white, rgba(210, 210, 210, 0.34));
+  position: relative; }
+
+.trainerPhoto {
+  border: 1px solid #d3d3d3;
+  z-index: 2;
+  position: relative;
+  background: #FFFFFF;
+  width: 30%; }
+
+.trainerBackPhoto {
+  opacity: 0.15;
+  width: 100%; }
+
+.backPhotoWrapper {
+  background: linear-gradient(to bottom, #a70000, #7d7d7d);
+  position: absolute;
+  left: 25px;
+  top: 115px;
+  width: 27%; }
+
+.trainerName {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-style: italic;
+  font-size: 32px;
+  font-family: Papyrus, fantasy !important;
+  word-spacing: 4px; }
+
+.backName {
+  position: absolute;
+  text-transform: uppercase;
+  font-family: Papyrus, fantasy !important;
+  font-size: 100px;
+  letter-spacing: 10px;
+  color: rgba(117, 117, 117, 0.09);
+  right: 120px;
+  top: 100px; }
+
+.detailsWrapper {
+  float: right;
+  margin-top: 150px; }
+
+.aboutMe {
+  font-size: 13px; }
+
+.specialty {
+  background: linear-gradient(to right, rgba(0, 125, 193, 0.78), #003a4a);
+  height: 18px;
+  line-height: 18px;
+  font-size: 11px;
+  float: left;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.51); }
+
+/*# sourceMappingURL=TrainersListElem.stylesheet.css.map */

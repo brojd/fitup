@@ -1,0 +1,25 @@
+.Slideshow {
+  background: #000000;
+  height: 450px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0 #350000; }
+
+.slideSection {
+  height: inherit;
+  position: relative; }
+
+.slide {
+  height: inherit;
+  position: absolute; }
+
+.slide__text {
+  color: #FFFFFF;
+  position: absolute;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif !important;
+  font-size: 25px;
+  text-shadow: 0px 0px 6px #000000, 1px 1px 4px #FF1B1B, -1px -1px 4px #FF1B1B; }
+
+.hide {
+  opacity: 0; }
+
+/*# sourceMappingURL=Slideshow.stylesheet.css.map */
