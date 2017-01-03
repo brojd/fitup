@@ -37,7 +37,7 @@ To run the front app you should:
 
 You should see:
 
-![FitUp-front](./readme-img.png)
+![FitUp-front](./readme-img1.png)
 
 
 
