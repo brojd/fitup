@@ -44,6 +44,8 @@ You should see:
 Both apps currently use backend which is deployed on Heroku so no need to run local server for backend.
 
 
+Please note that all data presented on pictures is not real!
+
 
 
 ## Built With
