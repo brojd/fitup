@@ -21,10 +21,11 @@ To run the admin app you should:
 3. Run ```gulp serve```
 4. Open your browser on: ```http://localhost:9000/```.
 
-You should see:
+## Admin panel - demo
 
-![FitUp-admin](./readme-img2.png)
+![FitUp-admin](./demo_gifs/admin/5.Demo.gif)
 
+Too see more detailed demo gifs, please visit ```./demo_gifs/admin``` directory.
 
 
 To run the front app you should:
@@ -35,9 +36,11 @@ To run the front app you should:
 4. Open your browser on: ```http://localhost:3000/```.
 
 
-You should see:
+## Front part - demo
 
-![FitUp-front](./readme-img1.png)
+![FitUp-front](./demo_gifs/front/5.Demo.gif)
+
+Too see more detailed demo gifs, please visit ```./demo_gifs/front``` directory.
 
 
 
